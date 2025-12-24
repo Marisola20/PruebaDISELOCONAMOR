@@ -1,9 +1,10 @@
 <?php
 // Configuración de la base de datos
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'diseloco_DCAperu');
-define('DB_USER', 'diseloco_MD');
-define('DB_PASS', 'Y-PckJ9%2v3.bMSV');
+define('DB_NAME', 'dcaperu_db');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+
 
 try {
     $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
