@@ -1,0 +1,1685 @@
+/* ===== ESTILOS ROMÁNTICOS PARA "DÍSELO CON AMOR" ===== */
+/* ARCHIVO CSS CARGADO CORRECTAMENTE - VERSIÓN ROMÁNTICA */
+
+/* Importar fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot:ital@0;1&family=Didact+Gothic&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #FFF6FA;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fondo romántico con nubecitas */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.5) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER CON EFECTO GLASSMORPHISM ===== */
+.header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-top: none;
+}
+
+/* Efecto de sombra rojita cuando se está moviendo */
+.header.moving {
+    box-shadow: 
+        0 4px 20px rgba(253, 66, 66, 0.2),
+        0 8px 32px rgba(253, 66, 66, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto glassmorphism cuando se hace scroll */
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 
+        0 12px 40px rgba(253, 66, 66, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: none;
+}
+
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 2rem;
+}
+
+.nav-logo h2 {
+    font-family: 'GFS Didot', serif;
+    color: #842F36;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(132, 47, 54, 0.1);
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #E65950;
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+}
+
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link.active {
+    color: #C3544D;
+    background: #FFECEE;
+    transform: translateY(-2px);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Botones del header */
+.btn-login, .btn-register {
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.btn-login {
+    color: #E65950;
+    border-color: #CD5750;
+    background: transparent;
+}
+
+.btn-login:hover {
+    background: #FD4242;
+    color: white;
+    transform: translateY(-2px);
+    border-color: #FD4242;
+}
+
+.btn-register {
+    background: #FFECEE;
+    color: #E65950;
+    border-color: #CD5750;
+}
+
+.btn-register:hover {
+    background: #FD4242;
+    border-color: #FD4242;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-profile, .btn-favorites, .btn-cart {
+    color: #842F36;
+    text-decoration: none;
+    font-size: 1.3rem;
+    position: relative;
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: rgba(196, 79, 72, 0.1);
+}
+
+.btn-profile:hover, .btn-favorites:hover, .btn-cart:hover {
+    background: rgba(196, 79, 72, 0.2);
+    color: #C24F48;
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #C24F48;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-logout {
+    color: #842F36;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid rgba(132, 47, 54, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-logout:hover {
+    background: rgba(132, 47, 54, 0.1);
+    border-color: #842F36;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #842F36;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* ===== HERO SECTION ROMÁNTICO ===== */
+.hero {
+    background: #FFF6FA;
+    color: #000000;
+    text-align: center;
+    padding: 140px 100px 50px 100px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        url('../img/nubewhite.svg') no-repeat 15% 85%,
+        url('../img/nubewhite.svg') no-repeat 80% 90%;
+    background-size: 180px 120px, 160px 100px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        url('../img/nubered.svg') no-repeat 10% 75%,
+        url('../img/nubered.svg') no-repeat 85% 85%;
+    background-size: 200px 150px, 180px 120px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-family: 'Didot LP Display', 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-shadow: 3px 3px 6px rgba(196, 79, 72, 0.1);
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #B5A2A2;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* Decoraciones flotantes del hero */
+.hero-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.floating-hearts i {
+    position: absolute;
+    color: rgba(196, 79, 72, 0.2);
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-hearts i:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts i:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+.floating-hearts i:nth-child(3) {
+    top: 80%;
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.floating-hearts i:nth-child(4) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.floating-hearts i:nth-child(5) {
+    top: 70%;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+/* Botón principal romántico */
+.btn-primary {
+    display: inline-block;
+    background: #E65950;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(230, 89, 80, 0.3);
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.btn-primary i {
+    margin-right: 8px;
+}
+
+.btn-primary:hover {
+    background: #C3544D;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(230, 89, 80, 0.4);
+}
+
+/* ===== TÍTULOS DE SECCIÓN ELEGANTES ===== */
+.section-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    margin-bottom: 4rem;
+    color: #FD4242;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #FD4242, #E65950);
+    border-radius: 2px;
+}
+
+/* ===== SECCIÓN DE PROMOCIONES ===== */
+.promotions {
+    padding: 100px 0;
+    background: transparent;
+    position: relative;
+}
+
+.promotions::before {
+    display: none;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.promo-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(196, 79, 72, 0.1);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(196, 79, 72, 0.1);
+}
+
+.promo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(196, 79, 72, 0.2);
+    border-color: rgba(196, 79, 72, 0.3);
+}
+
+.promo-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.promo-card:hover .promo-image img {
+    transform: scale(1.05);
+}
+
+.promo-content {
+    padding: 2rem;
+}
+
+.promo-content h3 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #FD4242;
+    font-weight: 600;
+}
+
+.promo-content p {
+    color: #B5A2A2;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.promo-price {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #B5A2A2;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.new-price {
+    color: #C24F48;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promo-date {
+    color: #B5A2A2;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+/* ===== SECCIÓN DE PRODUCTOS ===== */
+.products {
+    padding: 50px 0;
+    background: transparent;
+    position: relative;
+}
+
+.products::before {
+    display: none;
+}
+
+.section-tagline {
+    text-align: center;
+    color: #B5A2A2;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 500;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(196, 79, 72, 0.1);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(196, 79, 72, 0.2);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(196, 79, 72, 0.2);
+    border-color: rgba(196, 79, 72, 0.3);
+}
+
+.product-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #999;
+    font-size: 3rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.btn-favorite, .btn-quick-view {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #C24F48;
+    box-shadow: 0 4px 15px rgba(196, 79, 72, 0.2);
+}
+
+.btn-favorite:hover, .btn-quick-view:hover {
+    background: white;
+    color: #842F36;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(196, 79, 72, 0.3);
+}
+
+.product-info {
+    padding: 2rem;
+}
+
+.product-info h3 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #FD4242;
+    font-weight: 600;
+}
+
+.product-subtitle {
+    color: #B5A2A2;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.product-description {
+    color: #B5A2A2;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-contact {
+    background: #E65950;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(230, 89, 80, 0.2);
+}
+
+.btn-contact:hover {
+    background: #C3544D;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 89, 80, 0.3);
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #C24F48;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.fa-star {
+    color: #E0E0E0;
+    font-size: 1rem;
+}
+
+.fa-star.active {
+    color: #FFD700;
+}
+
+.rating-count {
+    color: #B5A2A2;
+    font-size: 0.9rem;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.btn-add-cart {
+    width: 100%;
+    background: #E65950;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-add-cart:hover {
+    background: #C3544D;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 89, 80, 0.4);
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #E65950;
+    border: 2px solid #E65950;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-secondary:hover {
+    background: #E65950;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 89, 80, 0.3);
+    border-color: transparent;
+}
+
+/* ===== SECCIÓN DE RESEÑAS ===== */
+.reviews {
+    padding: 50px 0;
+    background: transparent;
+    position: relative;
+}
+
+.reviews::before {
+    display: none;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(196, 79, 72, 0.1);
+    border: 2px dashed rgba(196, 79, 72, 0.3);
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(196, 79, 72, 0.15);
+}
+
+.review-content {
+    margin-bottom: 1.5rem;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(196, 79, 72, 0.2);
+}
+
+.reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviewer-details h4 {
+    color: #000;
+    margin-bottom: 0.3rem;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.review-date {
+    color: #000;
+    font-size: 0.85rem;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.review-text {
+    color: #555;
+    line-height: 1.7;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.add-review {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* ===== FOOTER SIMPLE Y LIMPIO ===== */
+.footer {
+    background: white;
+    color: #333;
+    padding: 40px 0;
+    position: relative;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #E65950;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #E65950;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f8f8;
+    color: #666;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #E65950;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 89, 80, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* ===== BOTÓN FLOTANTE DE WHATSAPP ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.whatsapp-float a {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    text-align: center;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 2.2rem;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+/* ===== MODALES ELEGANTES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(132, 47, 54, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #FFECEE 0%, white 100%);
+    margin: 5% auto;
+    padding: 3rem;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(132, 47, 54, 0.3);
+    border: 1px solid rgba(196, 79, 72, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #842F36;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #C24F48;
+}
+
+/* ===== FORMULARIOS ROMÁNTICOS ===== */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #842F36;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(196, 79, 72, 0.2);
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #C24F48;
+    box-shadow: 0 0 0 3px rgba(196, 79, 72, 0.1);
+}
+
+.rating-input {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.rating-input input[type="radio"] {
+    display: none;
+}
+
+.rating-input label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #E0E0E0;
+    transition: all 0.3s ease;
+}
+
+.rating-input input[type="radio"]:checked ~ label,
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* ===== ANIMACIONES ROMÁNTICAS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.product-card,
+.promo-card,
+.review-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1245px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(196, 79, 72, 0.1);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-actions {
+        gap: 0.8rem;
+    }
+}
+
+/* Logos responsive */
+.logo-mobile {
+    display: none;
+}
+
+.logo-desktop {
+    display: block;
+}
+
+/* Ocultar botones móviles por defecto */
+.mobile-actions {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .logo-desktop {
+        display: none;
+    }
+    
+    .logo-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .nav-container {
+        gap: 1rem;
+    }
+    
+    .nav-actions {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .nav-actions .btn-login,
+    .nav-actions .btn-register {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 428px) {
+    .nav-actions {
+        display: none;
+    }
+    
+    .nav-menu.active .mobile-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-top: 1px solid rgba(196, 79, 72, 0.1);
+        margin-top: 1rem;
+    }
+    
+    .mobile-actions .btn-login,
+    .mobile-actions .btn-register,
+    .mobile-actions .btn-profile,
+    .mobile-actions .btn-favorites,
+    .mobile-actions .btn-cart,
+    .mobile-actions .btn-logout {
+        margin: 0 1rem;
+        text-align: center;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-actions .btn-login {
+        color: #842F36;
+        border: 2px solid #842F36;
+        background: transparent;
+    }
+    
+    .mobile-actions .btn-register {
+        background: #DCBCBF;
+        color: white;
+        border: 2px solid #842F36;
+    }
+    
+    .mobile-actions .btn-profile,
+    .mobile-actions .btn-favorites,
+    .mobile-actions .btn-cart {
+        color: #842F36;
+        background: rgba(196, 79, 72, 0.1);
+        border: 1px solid rgba(196, 79, 72, 0.2);
+    }
+    
+    .mobile-actions .btn-logout {
+        color: #842F36;
+        border: 1px solid rgba(132, 47, 54, 0.3);
+        background: transparent;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    .promotions-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-float a {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 120px 15px 80px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .btn-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 2rem;
+        width: 95%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* ===== ESTADOS DE CARGA ===== */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #B5A2A2;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #E0E0E0;
+    border-top: 3px solid #C24F48;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 0.8rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== MENSAJES DE ALERTA ===== */
+.alert {
+    padding: 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    font-family: 'Didact Gothic', sans-serif;
+    border: 2px solid;
+}
+
+.alert-success {
+    background-color: rgba(212, 237, 218, 0.8);
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    background-color: rgba(248, 215, 218, 0.8);
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    background-color: rgba(209, 236, 241, 0.8);
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+/* ===== SECCIÓN DE CONTACTO ===== */
+.contact {
+    padding: 50px 0;
+    background: transparent;
+    position: relative;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+/* Formulario de Contacto */
+.contact-form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(196, 79, 72, 0.1);
+    border: 2px solid rgba(196, 79, 72, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #333;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(196, 79, 72, 0.2);
+    border-radius: 15px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #C24F48;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(196, 79, 72, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Información de Contacto y AMORBOT */
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.amorbot-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.amorbot-illustration {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.amorbot-image {
+    width: 180px;
+    height: auto;
+    max-width: 100%;
+    filter: drop-shadow(0 6px 12px rgba(196, 79, 72, 0.3));
+    transition: all 0.4s ease;
+    margin-bottom: 1rem;
+}
+
+.amorbot-image:hover {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 8px 16px rgba(196, 79, 72, 0.4));
+}
+
+.amorbot-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #FD4242;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(253, 66, 66, 0.1);
+}
+
+.amorbot-tagline {
+    color: #555;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de Más Información */
+.more-info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(196, 79, 72, 0.1);
+    border: 2px solid rgba(196, 79, 72, 0.1);
+}
+
+.more-info-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #FD4242;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    color: #E65950;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-item span {
+    color: #333;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-container,
+    .amorbot-section,
+    .more-info-card {
+        padding: 2rem;
+    }
+    
+    .section-title {
+        font-size: 48px;
+    }
+}
+
+/* ===== AMORBOT FLOTANTE ===== */
+.amorbot-float {
+    position: fixed;
+    bottom: 30px;
+    right: 110px;
+    z-index: 1000;
+}
+
+.amorbot-float a {
+    display: block;
+    width: 80px;
+    height: 100px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.amorbot-float a:hover {
+    transform: scale(1.1);
+}
+
+.amorbot-float-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== MODAL DEL AMORBOT ===== */
+.amorbot-modal {
+    max-width: 700px;
+    padding: 2rem;
+}
+
+.amorbot-modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(196, 79, 72, 0.1);
+}
+
+.amorbot-modal-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(196, 79, 72, 0.2));
+}
+
+.amorbot-modal-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #C24F48;
+    margin: 0;
+}
+
+.amorbot-modal-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.how-it-works {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 15px;
+    border-left: 4px solid #C24F48;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.step-icon {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.step-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #C24F48;
+    margin: 0 0 0.5rem 0;
+}
+
+.step-content p {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.amorbot-tip {
+    background: linear-gradient(135deg, #FFECEE 0%, #FFF5F7 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px dashed #C24F48;
+    text-align: center;
+}
+
+.amorbot-tip p {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #333;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive para el AMORBOT flotante */
+@media (max-width: 768px) {
+    .amorbot-float {
+        bottom: 20px;
+        right: 90px;
+    }
+    
+    .amorbot-float a {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .amorbot-modal {
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-icon {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,16 @@
+/* ARCHIVO DE PRUEBA - VERIFICAR QUE CSS CARGA */
+body {
+    background-color: #FFECEE !important;
+    color: #842F36 !important;
+}
+
+.header {
+    background-color: #FFFFFF !important;
+    border: 3px solid #C24F48 !important;
+}
+
+.hero h1 {
+    color: #000000 !important;
+    font-size: 4rem !important;
+    text-align: center !important;
+}
